@@ -10,6 +10,6 @@ int main()
         n=n/10;
         temp=temp*10+rev;
     }
-    printf("the revrse number are %d",i);
+    printf("the revrse number are %d",temp);
     return 0;
 }
