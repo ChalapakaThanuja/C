@@ -1,0 +1,39 @@
+#include<stdio.h>
+struct student
+{
+    char name[50];
+    int marks[5];
+    float average;
+};
+ void main()
+ {
+ struct student s[3];
+ for(int i=0;i<3;++i)
+ {
+     printf("enter information of student %d \n",i+1);
+     printf("enter the name:");
+     scanf("%s",s[i].name);
+     printf("\n enter the five marks of a students:");
+         int sum=0;
+         for(int j=0;j<3;j++)
+            {
+            scanf("%d",&s[i].marks[j]);
+            sum+=s[i].marks[j];
+            }
+    s[i].average=(float)sum/5.0;
+        printf("\n");
+ }
+     int maxindex=0;
+     float maxaverage=s[0].average;
+     for(int i=1;i<3;++i)
+     {
+            if(s[i].average>maxaverage)
+            {
+                maxaverage=s[i].average;
+                maxindex=i;
+            }
+
+     }
+            printf("\n The topper name is %s",s[maxindex].name);
+            printf("\n The average marks of top-per is:%2f",s[maxindex].average);
+ }
